@@ -26,7 +26,7 @@ const EmptyState: React.FC<EmptyStateProps> = () => {
         text-gray-900
         "
         >
-          Select a chat for start a new conversation
+          Select a chat, or start a new conversation
         </h3>
       </div>
     </div>
