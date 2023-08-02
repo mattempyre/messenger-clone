@@ -3,9 +3,7 @@
 import clsx from 'clsx';
 import { FieldErrors, FieldValues, UseFormRegister } from 'react-hook-form';
 
-import React from 'react';
-
-type InputProps = {
+interface InputProps {
   label: string;
   id: string;
   type?: string;
@@ -13,22 +11,28 @@ type InputProps = {
   register: UseFormRegister<FieldValues>;
   errors: FieldErrors;
   disabled?: boolean;
-};
+}
 
 const Input: React.FC<InputProps> = ({
   label,
   id,
-  type,
-  required,
   register,
+  required,
   errors,
+  type = 'text',
   disabled,
 }) => {
   return (
     <div>
       <label
-        className="block text-sm font-medium leading-6 text-gray-900"
         htmlFor={id}
+        className="
+          block 
+          text-sm 
+          font-medium 
+          leading-6 
+          text-gray-900
+        "
       >
         {label}
       </label>
@@ -66,4 +70,5 @@ const Input: React.FC<InputProps> = ({
     </div>
   );
 };
+
 export default Input;
