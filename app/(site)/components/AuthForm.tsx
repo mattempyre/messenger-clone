@@ -1,5 +1,5 @@
 'use client';
-
+import axios from 'axios';
 import Button from '@/app/components/Button';
 import Input from '@/app/components/inputs/Input';
 import React, { useCallback, useState } from 'react';
@@ -39,7 +39,7 @@ const AuthForm: React.FC<AuthFormProps> = () => {
     setIsLoading(true);
 
     if (variant === 'REGISTER') {
-      // Axios Register
+      axios.post('/api/register', data);
     }
     if (variant === 'LOGIN') {
       // NextAuth SignIn
