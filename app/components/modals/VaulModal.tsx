@@ -1,7 +1,6 @@
 'use client';
 import { useProModal } from '@/app/hooks/use-pro-modal';
 import React from 'react';
-import { IoClose } from 'react-icons/io5';
 import { Drawer } from 'vaul';
 
 type VaulModalProps = {};
