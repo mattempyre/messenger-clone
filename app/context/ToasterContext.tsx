@@ -1,5 +1,4 @@
 'use client';
-
 import { Toaster } from 'sonner';
 
 const ToasterContenxt = () => {

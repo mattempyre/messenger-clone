@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import ToasterContenxt from './context/ToasterContext';
+import AuthContext from './context/AuthContext';
 
 export const metadata: Metadata = {
   title: 'Messenger Clone',
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ToasterContenxt />
-        {children}
+        <AuthContext>
+          <ToasterContenxt />
+          {children}
+        </AuthContext>
       </body>
     </html>
   );

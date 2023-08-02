@@ -2,7 +2,6 @@
 import React from 'react';
 
 import { clsx } from 'clsx';
-import { text } from 'stream/consumers';
 
 type ButtonProps = {
   type?: 'button' | 'submit' | 'reset' | undefined;
