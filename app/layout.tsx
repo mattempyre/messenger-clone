@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import ToasterContenxt from './context/ToasterContext';
 import AuthContext from './context/AuthContext';
 import VaulModal from './components/modals/VaulModal';
+import ActiveStatus from './components/ActiveStatus';
 
 export const metadata: Metadata = {
   title: 'Messenger Clone',
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body>
         <AuthContext>
           <ToasterContenxt />
+          <ActiveStatus />
           {children}
         </AuthContext>
         <VaulModal />
